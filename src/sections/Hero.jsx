@@ -11,6 +11,8 @@ import Target from '../components/Target.jsx';
 import CanvasLoader from '../components/CanvasLoader.jsx';
 import { calculateSizes } from '../constants/index.js';
 import { HackerRoom } from '../components/HackerRoom.jsx';
+import HeroCamera from '../components/HeroCamera.jsx';
+import Button from '../components/Button.jsx';
 
 const Hero = () => {
   // Use media queries to determine screen size
@@ -24,7 +26,7 @@ const Hero = () => {
     <section className="min-h-screen w-full flex flex-col relative" id="home">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
         <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
-          Hi, I am Misty <span className="waving-hand">👋</span>
+          Hi, I am Yessine <span className="waving-hand">👋</span>
         </p>
         <p className="hero_tag text-gray_gradient">Building Products & Brands</p>
       </div>
@@ -35,7 +37,9 @@ const Hero = () => {
             {/* To hide controller */}
             <Leva hidden />
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
-              <HackerRoom scale={sizes.deskScale} position={sizes.deskPosition} rotation={[0.1, -Math.PI, 0]} />
+            <HeroCamera isMobile={isMobile}>
+                  <HackerRoom scale={sizes.deskScale} position={sizes.deskPosition} rotation={[0.1, -Math.PI, 0]} />
+            </HeroCamera>
             
             <group>
               <Target position={sizes.targetPosition} />
@@ -48,6 +52,13 @@ const Hero = () => {
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
           </Suspense>
         </Canvas>
+      </div>
+
+      <div className='absolute bottom-7 left-0 right-0 w-full z-10 c-space'>
+        <a href='#contact' className='w-fit'>
+          <Button isBeam={true} name="Let's work together" className="sm:w-fit w-full sm:min-w-96"></Button>
+        </a>
+
       </div>
 
       
