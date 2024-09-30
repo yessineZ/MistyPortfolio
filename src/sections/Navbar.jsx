@@ -26,7 +26,7 @@ const Navbar = () => {
                         Misty
                     </a>
                     <button onClick={toggleMenu} className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex">
-                        <img alt="toggle" className="w-6 h-6" src={`${isOpen ? '/assets/close.png' : '/assets/menu.png' }`} />
+                        <img alt="toggle" className="w-6 h-6" src={`${isOpen ? '/assets/close.svg' : '/assets/menu.svg' }`} />
                     </button> 
                  <nav className="sm:flex hidden">
                     <NavItems/>
