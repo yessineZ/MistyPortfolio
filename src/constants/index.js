@@ -40,7 +40,7 @@ export const clientReviews = [
   },
   {
     id: 3,
-    name: 'John Dohsas',
+    name: 'John ',
     position: 'Project Manager at UrbanTech ',
     img: 'assets/review3.png',
     review:
